@@ -11,113 +11,114 @@ public class Player extends MovableSprite
 	private int rightFrameStart = 12, rightFrameEnd = 15;
 
 	private boolean movingRight, movingLeft, jumping, ducking;
-	
+	public static final int ROWS = 4, COLUMNS = 4;
+
 	public Player()
 	{
-		super("player2.png", 4, 4);
+		super("player2.png", ROWS, COLUMNS);
 		setX(20);
 		setY(10);
 		setWidth(60);
 		setHeight(80);
 	}
-	
+
 	public boolean isMoving()
 	{
 		return isMovingRight() || isMovingLeft() || isJumping() || isDucking();
 	}
-	
+
 	public boolean isMovingRight()
 	{
 		return movingRight;
 	}
-	
+
 	public boolean isMovingLeft()
 	{
 		return movingLeft;
 	}
-	
+
 	public boolean isJumping()
 	{
 		return jumping;
 	}
-	
+
 	public boolean isDucking()
 	{
 		return ducking;
 	}
-	
+
 	public boolean isRightFrame()
 	{
 		return ((currentFrame >= rightFrameStart) &&
 				(currentFrame <= rightFrameEnd));
 	}
-	
+
 	public boolean isLeftFrame()
 	{
 		return ((currentFrame >= leftFrameStart) &&
 				(currentFrame <= leftFrameEnd));
 	}
-	
+
 	public boolean isJumpingFrame()
 	{
 		return ((currentFrame >= jumpFrameStart) &&
 				(currentFrame <= jumpFrameEnd));
 	}
-	
+
 	public boolean isDuckingFrame()
 	{
 		return ((currentFrame >= duckFrameStart) &&
 				(currentFrame <= duckFrameEnd));
 	}
-	
+
 	public void setMovingLeft(boolean b)
 	{
 		movingLeft = b;
 	}
-	
+
 	public boolean getMovingLeft()
 	{
 		return movingLeft;
 	}
-	
+
 	public void setMovingRight(boolean b)
 	{
 		movingRight = b;
 	}
-	
+
 	public boolean getMovingRight()
 	{
 		return movingRight;
 	}
-	
+
 	public void setJumping(boolean b)
 	{
 		jumping = b;
 	}
-	
+
 	public boolean getJumping()
 	{
 		return jumping;
 	}
-	
+
 	public void setDucking(boolean b)
 	{
 		ducking = b;
 	}
-	
+
 	public boolean getDucking()
 	{
 		return ducking;
 	}
-	
+
 	@Override
 	public void flipFrame()
 	{
 		System.out.println(currentFrame);
-		
-//		System.out.println(currentFrame);
-//		System.out.println(ducking + "   " + movingLeft + "   " + movingRight + "   " + jumping);
-		
+
+		//		System.out.println(currentFrame);
+		//		System.out.println(ducking + "   " + movingLeft + "   " + movingRight + "   " + jumping);
+
 		if(ducking && isDuckingFrame())
 		{
 			currentFrame++;
@@ -126,8 +127,8 @@ public class Player extends MovableSprite
 		}
 		else if(ducking && !isDuckingFrame())
 			currentFrame = duckFrameStart;
-		
-		
+
+
 		if(jumping && isJumpingFrame())
 		{
 			currentFrame++;
@@ -136,8 +137,8 @@ public class Player extends MovableSprite
 		}
 		else if(jumping && !isJumpingFrame())
 			currentFrame = jumpFrameStart;
-		
-		
+
+
 		if(movingLeft && isLeftFrame())
 		{
 			currentFrame++;
@@ -146,8 +147,8 @@ public class Player extends MovableSprite
 		}
 		else if(movingLeft && !isLeftFrame())
 			currentFrame = leftFrameStart;
-		
-		
+
+
 		if(movingRight && isRightFrame())
 		{
 			currentFrame++;
@@ -156,8 +157,8 @@ public class Player extends MovableSprite
 		}
 		else if(movingRight && !isRightFrame())
 			currentFrame = rightFrameStart;
-		
-		
+
+
 	}
 
 }

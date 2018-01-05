@@ -11,10 +11,10 @@ public class Entity
 
 	public Entity()
 	{
-		
+
 		coor = new Coordinate();
 		dim = new Dimension();
-		
+
 		setX(0);
 		setY(0);
 		setWidth(10);
@@ -61,12 +61,12 @@ public class Entity
 	{
 		dim.setHeight(height);
 	}
-	
+
 	public Color getColor()
 	{
 		return color;
 	}
-	
+
 	public void shiftX(int x)
 	{
 		coor.shiftX(x);
@@ -76,12 +76,12 @@ public class Entity
 	{
 		coor.shiftY(y);
 	}
-	
+
 	public void setColor(Color color)
 	{
 		this.color = color;
 	}
-	
+
 	public String toString()
 	{
 		return dim + " " + coor + " " + color;

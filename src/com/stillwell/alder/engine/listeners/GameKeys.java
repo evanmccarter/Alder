@@ -58,7 +58,7 @@ public class GameKeys extends Keys
 		else if(leftPressed())
 			player.setDirection(Direction.WEST);
 
-		
+
 		if(upPressed())
 			player.setJumping(true);
 		if(downPressed())
@@ -69,7 +69,7 @@ public class GameKeys extends Keys
 			player.setMovingRight(true);
 
 		if(pressed("SPACE"))
-			ShadowBall.see = true;
+			ShadowBall.visible = true;
 
 		if(pressed("ESC"))
 			System.exit(0);

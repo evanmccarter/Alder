@@ -14,7 +14,7 @@ public class Direction
 	public static final int SOUTH_WEST = 6;
 	public static final int WEST = 7;
 	public static final int NORTH_WEST = 8;
-	
+
 	private int direction;
 
 	public int getValue()
@@ -26,65 +26,65 @@ public class Direction
 	{
 		this.direction = direction;
 	}
-	
+
 	public boolean facingHorizontalDeadlock()
 	{
 		return getValue() == HORIZONTAL_DEAD_LOCK;
 	}
-	
+
 	public boolean facingVerticalDeadlock()
 	{
 		return getValue() == VERTICAL_DEAD_LOCK;
 	}
-	
+
 	public boolean facingNothing()
 	{
 		return getValue() == NO_DIRECTION;
 	}
-	
+
 	public boolean facingNorth()
 	{
 		return getValue() == NORTH;
 	}
-	
+
 	public boolean facingNorthEast()
 	{
 		return getValue() == NORTH_EAST;
 	}
-	
+
 	public boolean facingEast()
 	{
 		return getValue() == EAST;
 	}
-	
+
 	public boolean facingSouthEast()
 	{
 		return getValue() == SOUTH_EAST;
 	}
-	
+
 	public boolean facingSouth()
 	{
 		return getValue() == SOUTH;
 	}
-	
+
 	public boolean facingSouthWest()
 	{
 		return getValue() == SOUTH_WEST;
 	}
-	
+
 	public boolean facingWest()
 	{
 		return getValue() == WEST;
 	}
-	
+
 	public boolean facingNorthWest()
 	{
 		return getValue() == NORTH_WEST;
 	}
-	
+
 	public String toString()
 	{
 		return "Direction: " + direction;
 	}
-	
+
 }

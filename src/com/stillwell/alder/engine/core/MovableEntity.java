@@ -10,9 +10,9 @@ public class MovableEntity extends Entity
 
 	public MovableEntity()
 	{
-		
+
 		direction = new Direction();
-		
+
 		setX(0);
 		setY(0);
 		setWidth(10);
@@ -20,7 +20,7 @@ public class MovableEntity extends Entity
 		setColor(Color.black);
 		setDirection(Direction.NO_DIRECTION);
 	}
-	
+
 	public Direction getDirection()
 	{
 		return direction;
@@ -30,7 +30,7 @@ public class MovableEntity extends Entity
 	{
 		direction.setValue(dir);
 	}
-	
+
 	public void moveUp()
 	{
 		shiftY(-GameData.MOVE_AMOUNT);
@@ -53,7 +53,7 @@ public class MovableEntity extends Entity
 
 	public void move()
 	{
-		
+
 		switch(getDirection().getValue())
 		{
 		case 1:
@@ -88,7 +88,7 @@ public class MovableEntity extends Entity
 			//nothing
 			break;
 		}
-		
+
 	}
 
 }

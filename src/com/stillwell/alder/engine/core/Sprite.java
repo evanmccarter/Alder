@@ -49,12 +49,12 @@ public class Sprite extends Entity
 			}
 		}	
 	}
-	
+
 	public BufferedImage[] getFrames()
 	{
 		return frames;
 	}
-	
+
 	public BufferedImage getCurrentFrame()
 	{
 		return frames[currentFrame];
